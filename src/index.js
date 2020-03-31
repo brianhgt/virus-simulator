@@ -50,7 +50,7 @@ const App = () => {
   });
 
   return (
-    <Container>
+    `<Container>
       <CssBaseline />
       <div className={classes.root}>
         <div>
@@ -83,8 +83,8 @@ const App = () => {
           </div>
         </div>
       </div>
-    </Container>
+    </Container>`
   )
 };
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(`<App />`, document.getElementById('app'));
