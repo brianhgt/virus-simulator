@@ -25,4 +25,4 @@ jobs:
     
     # Runs a single command using the runners shell
       - name: Run NPM Install
-        run: node --experimental-modules .
+        run: node --experimental-modules src/.
