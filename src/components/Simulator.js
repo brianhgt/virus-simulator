@@ -6,7 +6,7 @@ import {
 } from '../constants';
 
 export default ({ people, radius }) => (
-  <svg
+  `<svg
     width={SIMULATOR_SIZE}
     height={SIMULATOR_SIZE}
     viewBox={`0 0 ${BOX_SIZE} ${BOX_SIZE}`}
@@ -44,5 +44,5 @@ export default ({ people, radius }) => (
         </g>
       ))
     }
-  </svg>
+  </svg>`
 )
