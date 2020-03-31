@@ -6,10 +6,10 @@ import {
 } from '../constants.js';
 
 export default ({ people, radius }) => (
-  `<svg
+  <svg
     width={SIMULATOR_SIZE}
     height={SIMULATOR_SIZE}
-    viewBox={\`0 0 ${BOX_SIZE} ${BOX_SIZE}\`}
+    viewBox={`0 0 ${BOX_SIZE} ${BOX_SIZE}`}
     style={{
       overflow: 'hidden'
     }}
@@ -44,5 +44,5 @@ export default ({ people, radius }) => (
         </g>
       ))
     }
-  </svg>`
+  </svg>
 )
