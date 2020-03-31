@@ -3,7 +3,7 @@ import {
   PEOPLE,
   BOX_SIZE,
   HISTORY
-} from './constants';
+} from './constants.js';
 
 export const generatePeople = (state) =>
   new Array(PEOPLE)
