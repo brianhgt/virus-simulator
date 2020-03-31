@@ -3,7 +3,7 @@ import {
   PEOPLE,
   COLORS,
   HISTORY
-} from '../constants';
+} from '../constants.js';
 
 export default ({ generations }) => {
   const widthFactor = 100 / HISTORY;
@@ -18,8 +18,8 @@ export default ({ generations }) => {
             key={generation}
           >
             {counts[-1] > 0 && (<rect
-              x={`${index * widthFactor}%`}
-              width={`${widthFactor}%`}
+              x={\`${index * widthFactor}%\`}
+              width={\`${widthFactor}%\`}
               y={0}
               height={counts[-1] / 2}
               style={{
@@ -27,8 +27,8 @@ export default ({ generations }) => {
               }}
             />)}
             {counts[1] > 0 && (<rect
-              x={`${index * widthFactor}%`}
-              width={`${widthFactor}%`}
+              x={\`${index * widthFactor}%\`}
+              width={\`${widthFactor}%\`}
               y={(PEOPLE - counts[1]) / 2}
               height={counts[1] / 2}
               style={{
