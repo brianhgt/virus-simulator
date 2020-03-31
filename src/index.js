@@ -10,15 +10,15 @@ import {
 import {
   createInitialState,
   runGeneration,
-} from './engine';
+} from './engine.js';
 import {
   SIMULATOR_SIZE,
 } from './constants';
-import useRequestAnimationFrame from './useRequestAnimationFrame';
+import useRequestAnimationFrame from './useRequestAnimationFrame.js';
 
-import GenerationsGraph from './components/GenerationsGraph';
-import Simulator from './components/Simulator';
-import Controls from './components/Controls';
+import GenerationsGraph from './components/GenerationsGraph.js';
+import Simulator from './components/Simulator.js';
+import Controls from './components/Controls.js';
 
 const useStyles = makeStyles({
   root: {
