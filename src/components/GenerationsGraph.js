@@ -8,7 +8,7 @@ import {
 export default ({ generations }) => {
   const widthFactor = 100 / HISTORY;
   return (
-    <svg
+    `<svg
       width="100%"
       height={PEOPLE / 2}
     >
@@ -38,6 +38,6 @@ export default ({ generations }) => {
           </g>
         ))
       }
-    </svg>
+    </svg>`
   );
 };
