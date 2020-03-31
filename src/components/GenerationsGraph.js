@@ -27,7 +27,7 @@ export default ({ generations }) => {
               }}
             />)}
             {counts[1] > 0 && (<rect
-              x={`${index * widthFactor}%\`}
+              x={`${index * widthFactor}%`}
               width={`${widthFactor}%`}
               y={(PEOPLE - counts[1]) / 2}
               height={counts[1] / 2}
