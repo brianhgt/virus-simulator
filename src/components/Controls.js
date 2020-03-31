@@ -32,7 +32,7 @@ export default ({ onChange, state }) => (
       step={0.5}
       onChange={(evt, value) => onChange('radius', value)}
       marks
-      min={1}
+      min={0}
       max={10}
     />
 
@@ -47,7 +47,7 @@ export default ({ onChange, state }) => (
       step={0.1}
       onChange={(evt, value) => onChange('infectionRate', value)}
       marks
-      min={0.1}
+      min={0}
       max={1}
     />
 
@@ -62,8 +62,8 @@ export default ({ onChange, state }) => (
       step={1}
       onChange={(evt, value) => onChange('infectionLength', value)}
       marks
-      min={7}
-      max={21}
+      min={0}
+      max={50}
     />
   </>
 );
