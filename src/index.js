@@ -13,7 +13,7 @@ import {
 } from './engine.js';
 import {
   SIMULATOR_SIZE,
-} from './constants';
+} from './constants.js';
 import useRequestAnimationFrame from './useRequestAnimationFrame.js';
 
 import GenerationsGraph from './components/GenerationsGraph.js';
