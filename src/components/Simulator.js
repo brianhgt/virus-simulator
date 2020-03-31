@@ -3,7 +3,7 @@ import {
   SIMULATOR_SIZE,
   BOX_SIZE,
   COLORS
-} from '../constants';
+} from '../constants.js';
 
 export default ({ people, radius }) => (
   `<svg
