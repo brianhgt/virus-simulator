@@ -5,7 +5,7 @@ import {
 } from '@material-ui/core';
 
 export default ({ onChange, state }) => (
-  `<>
+  <>
     <Typography id="motion-slider" gutterBottom>
       Motion
     </Typography>
@@ -65,5 +65,5 @@ export default ({ onChange, state }) => (
       min={0}
       max={50}
     />
-  </>`
+  </>
 );
