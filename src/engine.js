@@ -69,8 +69,7 @@ export const runGeneration = (state) => {
         .map(({ x, y, id }) => ([x, y, id]))
     );
 
-  people
-    .filter(({ status }) => status === 1)
+  people.filter(({ status }) => status === 1)
     .forEach((person) => {
       const found = qt.find(person.x, person.y, state.radius);
       if (found) {
@@ -114,6 +113,16 @@ export const createInitialState = (state = {
   infectionLength: 14,
   generations: [],
   generation: 0,
+  quarintineSize: 0,
+  quarintineSites: 0,
+  trafficHubs: 0,
+  trafficHubSize: 0,
+  trafficHubWorkers: 0,
+  communities: 0,
+  communityTravelRate: 0,
+  herdInitialPopulation: 0,
+  herdImplTime: 0
+
 }) => {
   const initialState = {
     ...state,
