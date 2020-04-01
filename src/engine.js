@@ -12,7 +12,7 @@ export const generatePeople = (state) =>
       id: i,
       x: Math.random() * BOX_SIZE,
       y: Math.random() * BOX_SIZE,
-      direction: Math.random() * (Math.PI * 2) - Math.PI,
+      direction: Math.random() * (Math.PI * 2),
       speed: state.motion,
       status: i === 0 ? 1 : 0,
       sickness: state.infectionLength,
@@ -32,7 +32,7 @@ export const runGenerationOnPerson = (person, state) => {
   ) {
     x = Math.min(BOX_SIZE - (state.radius * 2), Math.max(x, state.radius));
     y = Math.min(BOX_SIZE - (state.radius * 2), Math.max(y, state.radius));
-    direction += Math.random() * (Math.PI / 4);
+    direction += Math.random() * (Math.PI / 2) - (Math.PI / 4);
     speed = state.motion;
   }
 
