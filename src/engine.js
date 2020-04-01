@@ -12,7 +12,7 @@ export const generatePeople = (state) =>
       id: i,
       x: Math.random() * BOX_SIZE,
       y: Math.random() * BOX_SIZE,
-      direction: Math.random() * (Math.PI * 2),
+      direction: Math.random() * (Math.PI * 2) - Math.PI,
       speed: state.motion,
       status: i === 0 ? 1 : 0,
       sickness: state.infectionLength,
