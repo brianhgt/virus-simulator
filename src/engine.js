@@ -23,6 +23,21 @@ export const runGenerationOnPerson = (person, state) => {
   x += Math.sin(direction) * speed;
   y += Math.cos(direction) * speed;
 
+    var vec = {
+        x: Math.sin(direction) * speed,
+        y: Math.cos(direction) * speed
+    };
+
+    if(x <= state.radius || x >= BOX_SIZE - (state.radius * 2)) {
+        direction = Math.atan(vec.y / -vec.x);
+        x += Math.sin(direction) * speed;
+    }
+
+    if(y <= state.radius || y >= BOX_SIZE - (state.radius * 2)) {
+        direction = Math.atan(-vec.y / vec.x);
+        y += Math.cos(direction) * speed;
+    }
+
   if (
     x <= state.radius ||
     y <= state.radius ||
@@ -30,6 +45,7 @@ export const runGenerationOnPerson = (person, state) => {
     y >= BOX_SIZE - (state.radius * 2) ||
     Math.random() < 0.1
   ) {
+
     x = Math.min(BOX_SIZE - (state.radius * 2), Math.max(x, state.radius));
     y = Math.min(BOX_SIZE - (state.radius * 2), Math.max(y, state.radius));
     direction += Math.random() * (Math.PI / 2) - (Math.PI / 4);
