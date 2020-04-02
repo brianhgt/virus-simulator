@@ -31,9 +31,11 @@ export const runGenerationOnPerson = (person, state) => {
     if(x <= state.radius || x >= BOX_SIZE - (state.radius * 2)) {
         direction = Math.atan(vec.y / -vec.x);
         x += Math.cos(direction) * speed;
+        y += Math.sin(direction) * speed;
     } 
     else if(y <= state.radius || y >= BOX_SIZE - (state.radius * 2)) {
         direction = Math.atan(-vec.y / vec.x);
+        x += Math.cos(direction) * speed;
         y += Math.sin(direction) * speed;
     }
 
