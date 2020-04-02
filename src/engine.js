@@ -20,22 +20,22 @@ export const generatePeople = (state) =>
 
 export const runGenerationOnPerson = (person, state) => {
   let { speed, direction, x, y, sickness, status } = person;
-  x += Math.sin(direction) * speed;
-  y += Math.cos(direction) * speed;
+  x += Math.cos(direction) * speed;
+  y += Math.sin(direction) * speed;
 
     var vec = {
-        x: Math.sin(direction) * speed,
-        y: Math.cos(direction) * speed
+        x: Math.cos(direction) * speed,
+        y: Math.sin(direction) * speed
     };
 
     if(x <= state.radius || x >= BOX_SIZE - (state.radius * 2)) {
         direction = Math.atan(vec.y / -vec.x);
-        x += Math.sin(direction) * speed;
+        x += Math.cos(direction) * speed;
     }
 
     if(y <= state.radius || y >= BOX_SIZE - (state.radius * 2)) {
         direction = Math.atan(-vec.y / vec.x);
-        y += Math.cos(direction) * speed;
+        y += Math.sin(direction) * speed;
     }
 
   if (
