@@ -31,27 +31,26 @@ export const runGenerationOnPerson = (person, state) => {
     if(x <= state.radius || x >= BOX_SIZE - (state.radius * 2)) {
         direction = Math.atan(vec.y / -vec.x);
         x += Math.cos(direction) * speed;
-        y += Math.sin(direction) * speed;
     } 
-    else if(y <= state.radius || y >= BOX_SIZE - (state.radius * 2)) {
+    if(y <= state.radius || y >= BOX_SIZE - (state.radius * 2)) {
         direction = Math.atan(-vec.y / vec.x);
-        x += Math.cos(direction) * speed;
         y += Math.sin(direction) * speed;
     }
 
-  else if (
+ /* else if (
     x <= state.radius ||
     y <= state.radius ||
     x >= BOX_SIZE - (state.radius * 2) ||
     y >= BOX_SIZE - (state.radius * 2) ||
     Math.random() < 0.1
   ) {
-
-    x = Math.min(BOX_SIZE - (state.radius * 2), Math.max(x, state.radius));
-    y = Math.min(BOX_SIZE - (state.radius * 2), Math.max(y, state.radius));
-    direction += Math.random() * (Math.PI / 2) - (Math.PI / 4);
-    speed = state.motion;
-  }
+      */
+    if (Math.random() < 0.1) {
+        x = Math.min(BOX_SIZE - (state.radius * 2), Math.max(x, state.radius));
+        y = Math.min(BOX_SIZE - (state.radius * 2), Math.max(y, state.radius));
+        direction += Math.random() * (Math.PI / 2) - (Math.PI / 4);
+        speed = state.motion;
+    }
 
   if (status === 1 && sickness > 0) {
     sickness -= 0.2;
